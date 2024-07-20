@@ -1,17 +1,57 @@
+// BURGER
+// Закрыть модальное окно при нажатии на Esc
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.querySelector(".mobule_header").classList.remove("mobule_header_active")
+        document.querySelector(".btn_burger_wrapp").classList.remove("burger_active")
+        document.querySelector('.mob_big').classList.remove('mob_big_active');
+    }
+});
+
+// // Закрыть модальное окно при клике вне его
+// document.querySelector("#mobule_header, .mobule_header").addEventListener('click', event => {
+//     event._isClickWithInModal = true;
+// });
+// document.getElementById("mobule_header").addEventListener('click', event => {
+//     if (event._isClickWithInModal) return;
+//     event.currentTarget.classList.remove('mobule_header_active');
+// });
+
+// var burger = document.querySelector('.mobule_header_active');
+// document.addEventListener('mousedown', function(e){
+//     if(e.target.closest('.mobule_header') == null){
+//         document.getElementById("mobule_header").classList.remove("mobule_header_active")
+//         document.querySelector('.mob_big').classList.remove('mob_big_active');
+//         document.querySelector('.btn_burger_wrapp').classList.remove('burger_active');
+//     }
+// });
+
+document.querySelector('.btn_burger_wrapp').onclick = function () {
+    document.querySelector('.btn_burger_wrapp').classList.toggle('burger_active');
+    document.querySelector('.mobule_header').classList.toggle('mobule_header_active');
+    document.querySelector('.mob_big').classList.toggle('mob_big_active');
+}
 
 
+document.querySelector('.btn_head_mod').onclick = function () {
+    document.querySelector('.form_work').classList.add('form_work_active');
+    document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
+}
+document.querySelector('.btn_head_bur').onclick = function () {
+    document.querySelector('.form_work').classList.add('form_work_active');
+    document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
+}
 
-
-
-
-
-
-
+document.querySelector('.btn_head').onclick = function () {
+    document.querySelector('.form_work').classList.add('form_work_active');
+    document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
+}
 
 document.querySelector('.btn_work').onclick = function () {
     document.querySelector('.form_work').classList.add('form_work_active');
     document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
 }
+
 document.querySelector('.btn_close_popup').onclick = function () {
     document.querySelector('.form_work').classList.remove('form_work_active');
     document.querySelector('.popup_wrapp_work').classList.remove('popup_wrapp_work_active');
@@ -65,7 +105,9 @@ jQuery(document).ready(function () {
     			data: form.serialize(),
     			success: function(data) {
     				form.html(data);
-    				form.css('opacity','1');
+                    form.css('padding', '20px');
+                    form.css('border-radius', '5px');
+                    form.css('width', '500px');
                     form.find('.popup_status_good').html('Форма отправлена успешно');
                     //$('#myModal').modal('show') // для бутстрапа
     			},
@@ -96,15 +138,15 @@ jin.addEventListener('input', function(e){
     jin.value = jin.value.replace(/[0-9]/g, "");
 });
 
-btn.addEventListener('click', function(){
-    let val = jin.value;
-    let val1 = jnum.value;
-    if ( val + val1) {
-    jout.textContent = `Мы с вами свяжимся ${val} !`;
-    } else {
-    alert("введите имя");
-    }
-});
+// btn.addEventListener('click', function(){
+//     let val = jin.value;
+//     let val1 = jnum.value;
+//     if ( val + val1) {
+//     jout.textContent = `Мы с вами свяжимся ${val} !`;
+//     } else {
+//     alert("Введите имя");
+//     }
+// });
 
 
 

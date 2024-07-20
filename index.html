@@ -34,6 +34,34 @@
                     <button class="btn_head">Заказать услугу</button>
                 </nav>
             </div>
+            <div class="burger_wrapp">
+                <div class="wrapp_burger_sec">
+                    <button class="btn_head btn_head_bur">Заказать услугу</button>
+                </div>
+                
+            </div>
+
+            <div class="mobule_header" id="mobule_header">
+                <ul class="header_list header_list_mod">
+                    <li class="header_item header_item_mod">
+                        <a href="#" class="header_item_links">О нас</a>
+                    </li>
+                    <li class="header_item header_item_mod">
+                        <a href="#" class="header_item_links">Примеры работ</a>
+                    </li>
+                    <li class="header_item header_item_mod">
+                        <a href="#" class="header_item_links">Цены</a>
+                    </li>
+                    <li class="header_item header_item_mod">
+                        <a href="#" class="header_item_links">Отзывы</a>
+                    </li>
+                    <li class="header_item header_item_mod">
+                        <a href="#" class="header_item_links">Контакты</a>
+                    </li>
+                </ul>
+                <button class="btn_head btn_head_mod">Заказать услугу</button>
+            </div>
+            
             <div class="head_big_wrapp">
                 <!-- <h1 class="name_compani">AlexgroupRemont</h1> -->
                 <h1 class="name_compani">
@@ -56,13 +84,15 @@
             </div>
         </header>
 
-
+        <div class="mob_big"></div>
+        <div class="btn_burger_wrapp">
+            <span></span>
+        </div>
 
         <main class="main">
             <div class="img_wrap">
                 <img src="./image/rem7.jpeg" alt="Фон." class="img_main">
             </div>
-            <section class="main_wrapp">
                 <div class="key_wrapper">
                     <h2 class="work_compani">Ремонт квартир под ключ</h2>
                     <ul class="main_big_list">
@@ -80,19 +110,19 @@
                                 <span class="leader_text">5000 руб/кв.м</span>
                             </div>
                         </li>
-                        <li class="big_item big_item_thi">
+                        <li class="big_item big_item_thi big_item_suii">
                             <img src="image/lineika.png" alt="Иконка." class="lead_image">
                             <div class="lead_text_wrap lead_text_wrap_ex">
                                 <span class="text_lead_thi">Бесплатный <br> замер</span>
                             </div>
                         </li>
-                        <li class="big_item big_item_fou">
+                        <li class="big_item big_item_fou big_item_suii">
                             <img src="image/data.png" alt="Иконка." class="lead_image">
                             <div class="lead_text_wrap lead_text_wrap_ex">
                                 <span class="text_lead_thi">Рассрочка 0% <br> на 18 месяцев</span>
                             </div>
                         </li>
-                        <li class="big_item big_item_fif">
+                        <li class="big_item big_item_fif big_item_suii">
                             <img src="image/garant.png" alt="Иконка." class="lead_image">
                             <div class="lead_text_wrap lead_text_wrap_ex">
                                 <span class="text_lead_thi">Гарантия <br> 3 года</span>
@@ -106,7 +136,6 @@
                         <form action="./sender.php" method="post" class="form_work" id="form_work1">
                             <div class="form_box_work">
                                 <span class="btn_close_popup"></span>
-                                <p class="name_form_sent" id="out"></p>
                                 <div class="form_wrapper_list">
                                     <span class="box_list_popup">
                                         <input type="text" id="popup_name" class="name_popup popup_inp" name="name" required>
@@ -119,38 +148,38 @@
         
                                     <button class="popup_btn_sent" id="btn" type="button">Отправить</button>
                                 </div>
-                                <div class="popup_status popup_status_good"></div>
                             </div>
                         </form>
                     </div>
 
-
-                <div class="percent_list">
-                    <span class="percent_text">
-                        <span class="percent_size">Беспроцентная<br> рассрочка</span> на все
-                    </span>
-                    <ul class="list_num_main">
-                        <li class="num_item_main">
-                            <div class="box_num_main">
-                                <p class="text_num_box"><span class="num_ex">0</span>%</p> 
-                                <span class="text_num_box">Переплат</span> 
-                            </div>
-                        </li>
-                        <li class="num_item_main">
-                            <div class="box_num_main">
-                                <p class="text_num_box"><span class="num_ex">0</span>%</p> 
-                                <span class="text_num_box">Взнос</span> 
-                            </div>
-                        </li>
-                        <li class="num_item_main">
-                            <div class="box_num_main">
-                                <p class="text_num_box"><span class="num_ex">18</span></p> 
-                                <span class="text_num_box">Месяцев</span> 
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="btn_procent">Получить рассрочку</button>
-                </div>
+                    <div class="percent_list_big">
+                        <div class="percent_list">
+                            <span class="percent_text">
+                                <span class="percent_size">Беспроцентная<br> рассрочка</span> на все
+                            </span>
+                            <ul class="list_num_main">
+                                <li class="num_item_main">
+                                    <div class="box_num_main">
+                                        <p class="text_num_box"><span class="num_ex">0</span>%</p> 
+                                        <span class="text_num_box">Переплат</span> 
+                                    </div>
+                                </li>
+                                <li class="num_item_main">
+                                    <div class="box_num_main">
+                                        <p class="text_num_box"><span class="num_ex">0</span>%</p> 
+                                        <span class="text_num_box">Взнос</span> 
+                                    </div>
+                                </li>
+                                <li class="num_item_main">
+                                    <div class="box_num_main">
+                                        <p class="text_num_box"><span class="num_ex">18</span></p> 
+                                        <span class="text_num_box">Месяцев</span> 
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="btn_procent">Получить рассрочку</button>
+                        </div>
+                    </div>
                 <div class="garant_wrapp">
                     <h2 class="garant_main">Наши гарантии</h2>
                     <ul class="garant_list">
@@ -172,7 +201,7 @@
                                     Подготавливаем подробную смету. Оплата — по факту выполненных работ.</span>
                             </div>
                         </li>
-                        <li class="gatant_item">
+                        <li class="gatant_item gatant_item_sec">
                             <div class="garant_box">
                                 <img src="image/srok1.png" alt="Иконка." class="garant_image">
                                 <h3 class="text_gatant">Выполнение работ в срок</h3>
@@ -185,7 +214,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="view_wrapp">
+                <!--<div class="view_wrapp">
                     <h2 class="view_work">Виды ремонта</h2>
                     <ul class="view_list">
                         <li class="view_item">
@@ -287,8 +316,7 @@
                         <button class="view_btn_new">Новостройка</button>
                         <button class="view_btn_defolt">Вторичка</button>
                     </div>
-                </div>
-            </section>
+                </div>-->
         </main>
 
 
