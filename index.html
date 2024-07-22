@@ -7,7 +7,7 @@
     <script src="./js/jquery.maskedinput.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="styles/style.css">
-    <title>Apartments</title>
+    <title>AlexGroupRemont</title>
 </head>
 <body class="body">
     <div class="body_wrapper">
@@ -38,6 +38,10 @@
                 <div class="wrapp_burger_sec">
                     <button class="btn_head btn_head_bur">Заказать услугу</button>
                 </div>
+
+                <a href="tel:898816011189" class="tel_link">
+                    <img src="./image/telefon.png" alt="Телефон." class="tel_header">
+                </a>
                 
             </div>
 
@@ -60,6 +64,10 @@
                     </li>
                 </ul>
                 <button class="btn_head btn_head_mod">Заказать услугу</button>
+
+                <a href="tel:898816011189" class="tel_link_btn">
+                    <img src="./image/telefon.png" alt="Телефон." class="tel_header">
+                    +7(988)160-11-189</a>
             </div>
             
             <div class="head_big_wrapp">
@@ -99,33 +107,44 @@
                         <li class="big_item big_item_ex">
                             <img src="image/money.png" alt="Иконка." class="lead_image lead_image_ex">
                             <div class="lead_text_wrap">
-                                <span class="text_lead_sec">Стоимость от</span>
-                                <span class="leader_text">12 000 руб/кв.м</span>
+                                <span class="text_lead_sec text_lead_sec_ex">Стоимость от</span>
+                                <span class="leader_text leader_text_ex">12 000 руб/кв.м</span>
+
+                                <span class="mod_text">Стоимость от
+                                    <span class="leader_text_sec">12 000 руб/кв.м</span>
+                                </span>
                             </div>
                         </li>
                         <li class="big_item big_item_ex big_item_sec">
                             <img src="image/lopata.png" alt="Иконка." class="lead_image lead_image_ex">
                             <div class="lead_text_wrap">
-                                <span class="text_lead_sec">Черновые материалы</span>
-                                <span class="leader_text">5000 руб/кв.м</span>
+                                <span class="text_lead_sec text_lead_sec_ex">Черновые материалы</span>
+                                <span class="leader_text leader_text_ex">5000 руб/кв.м</span>
+
+                                <span class="mod_text">Материалы
+                                    <span class="leader_text_sec">5000 руб/кв.м</span>
+                                </span>
                             </div>
                         </li>
                         <li class="big_item big_item_thi big_item_suii">
                             <img src="image/lineika.png" alt="Иконка." class="lead_image">
                             <div class="lead_text_wrap lead_text_wrap_ex">
                                 <span class="text_lead_thi">Бесплатный <br> замер</span>
+                                <span class="text_lead_thi_sec">Бесплатный замер</span>
                             </div>
                         </li>
                         <li class="big_item big_item_fou big_item_suii">
                             <img src="image/data.png" alt="Иконка." class="lead_image">
                             <div class="lead_text_wrap lead_text_wrap_ex">
                                 <span class="text_lead_thi">Рассрочка 0% <br> на 18 месяцев</span>
+                                <span class="text_lead_thi_sec">Рассрочка 0% на 18 месяцев</span>
                             </div>
                         </li>
                         <li class="big_item big_item_fif big_item_suii">
                             <img src="image/garant.png" alt="Иконка." class="lead_image">
                             <div class="lead_text_wrap lead_text_wrap_ex">
                                 <span class="text_lead_thi">Гарантия <br> 3 года</span>
+                                <span class="text_lead_thi_sec">Гарантия 3 года</span>
                             </div>
                         </li>
                     </ul>
@@ -151,13 +170,35 @@
                             </div>
                         </form>
                     </div>
+                    <div class="popup_wrapp_work popup_wrapp_work2" id="popup_wrapp_work_sec">
+                        <form action="./sender_sec.php" method="post" class="form_work form_work2" id="form_work2">
+                            <div class="form_box_work">
+                                <span class="btn_close_popup btn_close_popup2"></span>
+                                <div class="form_wrapper_list">
+                                    <h3 class="giv_discount">Получите скидку 10 %</h3>
+                                    <span class="box_list_popup">
+                                        <input type="text" id="popup_name" class="name_popup name_popup_1 popup_inp" name="name" required>
+                                        <label class="popup_input_text popup_input_text_1" for="popup_name">Имя</label>
+                                    </span>
+                                    <span class="box_list_popup">
+                                        <input id="popup_num"  type="text" class="phone_pop phone_pop_1 popup_inp" name="phone" required>
+                                        <label class="popup_input_text popup_input_text_sec popup_input_text_sec_1" for="popup_num2">Телефон</label>
+                                    </span>
+        
+                                    <button class="popup_btn_sent popup_btn_sent2" id="btn2" type="button">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
                     <div class="percent_list_big">
                         <div class="percent_list">
                             <span class="percent_text">
-                                <span class="percent_size">Беспроцентная<br> рассрочка</span> на все
+                                <span class="percent_size">Получите  скидку</span> на все
                             </span>
-                            <ul class="list_num_main">
+                            
+                            <!-- <span class="percent_size">10%</span> -->
+                            <!-- <ul class="list_num_main">
                                 <li class="num_item_main">
                                     <div class="box_num_main">
                                         <p class="text_num_box"><span class="num_ex">0</span>%</p> 
@@ -176,12 +217,12 @@
                                         <span class="text_num_box">Месяцев</span> 
                                     </div>
                                 </li>
-                            </ul>
-                            <button class="btn_procent">Получить рассрочку</button>
+                            </ul> -->
+                            <button class="btn_procent" id="btn_procent">Получить скидку</button>
                         </div>
                     </div>
                 <div class="garant_wrapp">
-                    <h2 class="garant_main">Наши гарантии</h2>
+                    <h2 class="garant_main">Гарантии</h2>
                     <ul class="garant_list">
                         <li class="gatant_item">
                             <div class="garant_box">

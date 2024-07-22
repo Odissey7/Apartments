@@ -57,6 +57,15 @@ document.querySelector('.btn_close_popup').onclick = function () {
     document.querySelector('.popup_wrapp_work').classList.remove('popup_wrapp_work_active');
 }
 
+document.querySelector('.btn_procent').onclick = function () {
+    document.querySelector('.form_work2').classList.add('form_work_active');
+    document.querySelector('.popup_wrapp_work2').classList.add('popup_wrapp_work_active');
+}
+document.querySelector('.btn_close_popup2').onclick = function () {
+    document.querySelector('.form_work2').classList.remove('form_work_active');
+    document.querySelector('.popup_wrapp_work2').classList.remove('popup_wrapp_work_active');
+}
+
 // Закрыть модальное окно при нажатии на Esc
 window.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
@@ -84,6 +93,32 @@ document.addEventListener('mousedown', function(e){
 });
 
 
+// Закрыть модальное окно при нажатии на Esc
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById("form_work2").classList.remove("form_work_active")
+        document.getElementById("popup_wrapp_work2").classList.remove("popup_wrapp_work_active")
+    }
+});
+
+
+// Закрыть модальное окно при клике вне его
+document.querySelector("#form_work2, .form_work2").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("form_work2").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('form_work_active');
+});
+
+var popup = document.querySelector('.form_work_active');
+document.addEventListener('mousedown', function(e){
+    if(e.target.closest('.form_work2') === null){
+        document.getElementById("form_work2").classList.remove("form_work_active")
+        document.querySelector('.popup_wrapp_work2').classList.remove('popup_wrapp_work_active');
+    }
+});
+
 
 
 jQuery(document).ready(function () {
@@ -107,7 +142,45 @@ jQuery(document).ready(function () {
     				form.html(data);
                     form.css('padding', '20px');
                     form.css('border-radius', '5px');
-                    form.css('width', '500px');
+                    form.css('width', '65%');
+                    form.css('background-color', '#0c3245');
+                    form.find('.popup_status_good').html('Форма отправлена успешно');
+                    //$('#myModal').modal('show') // для бутстрапа
+    			},
+    			error:	 function() {
+    			    form.find('.popup_status').html('Серверная ошибка');
+    			}
+    		});
+    	}
+    });
+
+
+});
+
+
+jQuery(document).ready(function () {
+
+    $(".popup_num2").mask("+7 (999) 999-99-99"); 
+    
+
+    jQuery('.popup_btn_sent2').click( function() {
+    	var form = jQuery(this).closest('form');
+    	
+    	if ( form.valid() ) {
+    		// form.css('opacity','.5');
+    		var actUrl = form.attr('action');
+
+    		jQuery.ajax({
+    			url: actUrl,
+    			type: 'post',
+    			dataType: 'html',
+    			data: form.serialize(),
+    			success: function(data) {
+    				form.html(data);
+                    form.css('padding', '20px');
+                    form.css('border-radius', '5px');
+                    form.css('width', '65%');
+                    form.css('background-color', '#0c3245');
                     form.find('.popup_status_good').html('Форма отправлена успешно');
                     //$('#myModal').modal('show') // для бутстрапа
     			},
@@ -188,5 +261,12 @@ document.querySelector('.name_popup').onclick = function () {
 }
 document.querySelector('.phone_pop').onclick = function () {
     document.querySelector('.popup_input_text_sec').classList.add('popup_input_text_active');
+}
+
+document.querySelector('.name_popup_1').onclick = function () {
+    document.querySelector('.popup_input_text_1').classList.add('popup_input_text_active');
+}
+document.querySelector('.phone_pop_1').onclick = function () {
+    document.querySelector('.popup_input_text_sec_1').classList.add('popup_input_text_active');
 }
 
