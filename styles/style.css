@@ -81,7 +81,7 @@ body {
     max-width: 1920px;
     min-width: 300px;
     margin: 0 auto;
-    min-height: 2000px;
+    min-height: 3000px;
 }
 
 .body_wrapper {
@@ -531,6 +531,10 @@ header {
     font-size: 30px;
     color: #3500d3;
     user-select: none;
+}
+
+.text_lead_thi {
+    text-align: center;
 }
 
 .text_lead_thi_sec {
@@ -1015,8 +1019,113 @@ label.error{
     margin: 0 auto;
 }
 
+.primer_work {
+    white-space: nowrap;
+    font-size: 45px;
+    margin-bottom: 0;
+}
 
 
+.slider_wrapp {
+    transition: all 0.4s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.slider_btn {
+    user-select: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #3feee6;
+    transition: all 0.4s linear;
+}
+
+.slider_list {
+    position: relative;
+}
+
+.slider_btn:hover {
+    transition: all 0.4s linear;
+    opacity: 0.7;
+    scale: 1.04;
+}
+
+.slider_img {
+    /* position: relative; */
+    object-fit: cover;
+    width: 800px;
+    height: 500px;
+    transition: all 0.4s linear;
+    border-radius: 20px;
+}
+
+.slider_img_hidden {
+    transition: all 0.4s linear;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-0%, 0);
+}
+
+.btn_img_slider {
+    width: 50px;
+    transition: all 0.4s linear;
+}
+
+.btn_img_slider_sec {
+    transform: rotate(180deg);
+}
+
+
+
+
+.page-title {
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: #3feee6;
+    border-radius: 50%;
+    color: #ffffff;
+    z-index: 10;
+}
+
+.prev-button {
+    left: -11%;
+}
+
+.next-button {
+    right: -11%;
+}
 
 
 
@@ -1122,6 +1231,10 @@ label.error{
 }
 
 @media (max-width:1500px) {
+    /* .slider_img {
+        scale: 0.9;
+    } */
+    
     .header_item_links {
         font-size: 18px;
         transition: all 0.4s linear;
@@ -1225,6 +1338,11 @@ label.error{
 }
 
 @media (max-width:1100px) {
+    .slider_wrapp {
+        transition: all 0.4s linear;
+        scale: 0.9;
+    }
+
     .percent_list {
         padding: 30px 10px;
     }
@@ -1310,6 +1428,12 @@ label.error{
 }
 
 @media (max-width:910px) {
+    .primer_work_wrapp {
+        scale: 0.9;
+        transition: all 0.4s linear;
+        transform: translate(0, -38%);
+    }
+
     .percent_list {
         gap: 30px;
     }
@@ -1356,6 +1480,19 @@ label.error{
     .leader_text {
         transition: all 0.4s linear;
         font-size: 18px;
+    }
+}
+
+@media (max-width:830px) {
+    .primer_work_wrapp {
+        scale: 0.75;
+        transition: all 0.4s linear;
+        transform: translate(0, -55%);
+    }
+
+    .primer_work {
+        transition: all 0.4s linear ;
+        scale: 1.2;
     }
 }
 
@@ -1430,6 +1567,12 @@ label.error{
     }
 }
 
+@media (max-width:680px) {
+    .slider_wrapp {
+        scale: 0.7;
+        transform: translate(0, -14%);
+    }
+}
 @media (max-width:660px) {
     
     .img_main {
@@ -1448,6 +1591,11 @@ label.error{
 }
 
 @media (max-width:630px) {
+
+    .primer_work_wrapp {
+        transform: translate(0, -84%);
+    }
+
     .percent_list {
         scale: 0.7;
         gap: 30px;
@@ -1512,6 +1660,11 @@ label.error{
 
 @media (max-width:540px) {
 
+    .primer_work_wrapp {
+        scale: 0.65;
+        transform: translate(0, -145%);
+    }
+
 @keyframes row {
     0% {
         color: #000;
@@ -1554,6 +1707,11 @@ label.error{
 }
 
 @media (max-width:510px) {
+
+    .primer_work_wrapp {
+        scale: 0.65;
+        transform: translate(0, -172%);
+    }
 
     .tel_header {
         width: 30px;
@@ -1629,9 +1787,18 @@ label.error{
     .name_compani_span {
         font-size: 22px;
     }
+
+    .primer_work_wrapp {
+        scale: 0.5;
+        transform: translate(0, -240%);
+    }
 }
 
 @media (max-width:420px) {
+
+    .primer_work_wrapp {
+        transform: translate(0, -260%);
+    }
 
     .img_main {
         height: 400px;
@@ -1700,6 +1867,20 @@ label.error{
     .percent_list {
         padding: 0;
         scale: 0.45;
+    }
+}
+@media (max-width:375px) {
+    .primer_work_wrapp {
+        transform:  translate(0, -270%);
+    }
+
+    .primer_work {
+        font-size: 35px;
+    }
+
+    .slider_wrapp {
+        scale: 0.6;
+        transform: translate(0, -24%);
     }
 }
 @media (max-width:340px) {
